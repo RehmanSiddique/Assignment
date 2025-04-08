@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:login_home_page/login.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:login_home_page/splash_screen.dart';
 
-void main() {
-  runApp(MyApp());
-}
+void main() => runApp(NoteTakingApp());
 
-class MyApp extends StatelessWidget {
+class NoteTakingApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Login App',
-      home: LoginScreen(),
+      home: SplashScreen(),
+      theme: ThemeData(
+        primarySwatch: Colors.deepPurple,
+        textTheme: GoogleFonts.poppinsTextTheme(),
+      ),
     );
   }
 }
